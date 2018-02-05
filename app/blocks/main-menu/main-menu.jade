@@ -1,0 +1,19 @@
+mixin main-menu()
+	+b('nav').main-menu&attributes(attributes)
+		+e('ul').wrap
+			+e('li').item
+				+e('a').link_active._hover(href='/home')
+					| Home
+			+e('li').item
+				+e('a').link._hover(href='/gallery')
+					| Gallery
+			+e('li').item
+				+e('a').link._hover(href='/travel')
+					| Travel
+			+e('li').item
+				+e('a').link._hover(href='aboutme')
+					| About Me
+			+e('li').item
+				+e('a').link._hover(href='contacts')
+					| Contacts
+			

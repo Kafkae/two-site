@@ -1,0 +1,12 @@
+include ../social-author/social-author
+
+mixin about(ab)
+	+b('aside').about
+		+e('h2').title
+			| who am i?
+		+e.avatar
+		+e('p').description
+			| #{ab.description}
+		+social-author()
+		
+		
