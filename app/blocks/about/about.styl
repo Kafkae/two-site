@@ -1,0 +1,30 @@
+.about
+	width 100%
+	display flex
+	flex-direction column
+	justify-content space-around
+	align-items center
+	align-content center
+	min-height 540px
+	border 2px solid #000
+	margin-bottom 35px
+
+	&__title
+		heading()
+
+	&__avatar
+		width 300px
+		height 290px
+		background-size cover
+		background-image url('/assets/images/avatar.png')
+		clip-path polygon(50% 1%, 100% 38%, 82% 100%, 18% 100%, 1% 38%)
+
+	&__description
+		text-align center
+		font-size .9em
+		line-height 1.5
+		width 70%
+
+@media screen and (max-width 1161px)
+	.about
+		border none

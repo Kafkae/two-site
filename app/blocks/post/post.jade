@@ -1,0 +1,10 @@
+mixin post(data)
+	+b.post&attributes(attributes)
+		+e.group-info 
+			+e('a').title(href='javascript:void(0)') #{data.title}
+			+e('span').date #{data.date}
+		+e('h3').name #{data.name}
+		+e.group
+			+e.image(src='#{data.photo}')
+		+e('p').description #{data.description}
+		+e('a').read-more(href='javascript:void(0)') read more

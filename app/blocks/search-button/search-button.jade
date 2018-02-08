@@ -1,0 +1,13 @@
+include ../icon/icon
+
+
+mixin search-button()
+    +b.search-button
+        +e('button').btn-search(title='Поиск по сайту')
+            +icon('icon-search')(width="16" height='16')
+        +e.search-popup
+            +e.search-bg
+            +e.search-form
+                +e('form').form(action="javascript:void(0)" method="get" )
+                    +e.form-wrap    
+                        +e('input').field(type="search" id="search" name="s" placeholder="Поиск...")
