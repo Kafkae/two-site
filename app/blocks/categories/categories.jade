@@ -1,7 +1,0 @@
-mixin categories(data)
-	+b('aside').categories&attributes(attributes)
-		+e('h3').title categories
-		+e('ul').list
-			each value in data
-				+e('li').item
-					+e('a').link._hover(href='#{value.href}') #{value.name}
