@@ -6,6 +6,7 @@ include ../categories/categories
 include ../subscribe/subscribe
 include ../popular-post/popular-post
 include ../follows/follows
+include ../tags/tags
 include ../slider/slider
 
 mixin index()
@@ -29,3 +30,4 @@ mixin index()
 			+subscribe
 			+popular-post(getData('popular-post'))
 			+follows
+			+tags

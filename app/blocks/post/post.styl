@@ -25,6 +25,7 @@
 		font-family sfont
 		font-weight bold
 		text-transform uppercase
+		margin 10px
 		font-size 1.5em
 
 	&__image
@@ -65,9 +66,18 @@
 		flex-basis 90%
 		text-align center
 
+		&__description
+			font-size 1.5em
+
+		&__read-more
+			align-self center
+
 @media screen and (max-width 500px)
 	.post
 		flex-basis 100%
-		
-		&__read-more
-			align-self center
+
+		&__description
+			padding-left 15px
+			padding-right 15px
+			margin 5px
+			

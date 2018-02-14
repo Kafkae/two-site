@@ -1,3 +1,20 @@
 mixin tags()
-	+b.tags&attributes(attributes)
-		block
+	+b('aside').tags&attributes(attributes)
+		+e('h2').title tags
+		+e('ul').items
+			+e('li').item
+				+e('a').show(href='javascript:void(0)' alt='video') video
+			+e('li').item
+				+e('a').show(href='javascript:void(0)' alt='presentations') presentations
+			+e('li').item
+				+e('a').show(href='javascript:void(0)' alt='beauty') beauty
+			+e('li').item
+				+e('a').show(href='javascript:void(0)' alt='decor') decor
+			+e('li').item
+				+e('a').show(href='javascript:void(0)' alt='fashion') fashion
+			+e('li').item
+				+e('a').show(href='javascript:void(0)' alt='resorurces') resorurces
+			+e('li').item
+				+e('a').show(href='javascript:void(0)' alt='books') books
+
+

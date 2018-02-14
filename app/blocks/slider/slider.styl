@@ -1,6 +1,32 @@
 .slider
 	border-top 2px solid #F3F3F3
-	padding-top 10px
+	padding-top 25px
 	margin-top 20px
-	width 100%
+	margin-bottom 30px
 	max-width 757px
+	position relative
+
+.owl-dots
+	position absolute
+	bottom 20px
+	width 20px
+	height 20px
+	border-radius 50%
+	width 100%
+	text-align center
+
+.owl-dot
+	width 20px
+	height 20px
+	border-radius 50px
+	background-color  #EAEAEA
+	margin 5px
+	display inline-block
+
+.owl-dots .owl-dot.active {
+    background-color accent
+}
+
+@media screen and (max-width 1166px)
+	.slider
+		max-width 100%
