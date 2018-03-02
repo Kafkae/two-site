@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./app/blocks/slider/slider.js?3294"],"names":["$","slick"],"mappings":";;;;;;;AAAA;;AAEAA,GAAE,SAAF,EAAaC,KAAb,G","file":"0.1f0f28598d68d336e041.hot-update.js","sourcesContent":["import 'slick-carousel';\r\n\r\n$('.slider').slick();\n\n\n// WEBPACK FOOTER //\n// ./app/blocks/slider/slider.js"],"sourceRoot":""}
