@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./app/blocks/gallery/gallery.js?e873"],"names":[],"mappings":";;;;;;;AAAA,yB","file":"0.3f9f6437f7fbc0d3380b.hot-update.js","sourcesContent":["import 'fancybox'\r\n\r\n// $(\"[data-fancybox]\").fancybox({\r\n//     // Options will go here\r\n// });\n\n\n// WEBPACK FOOTER //\n// ./app/blocks/gallery/gallery.js"],"sourceRoot":""}
