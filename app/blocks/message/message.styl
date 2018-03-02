@@ -1,2 +1,72 @@
 .message
-	display block
+	width 100%
+	display flex
+	flex-direction column
+	justify-content space-around
+	border 2px solid #000
+	min-height 415px
+	align-items center
+	font-size .8em
+
+	&__title
+		heading()
+
+	&__form
+		display flex
+		flex-direction column
+		width 300px
+		min-height 265px
+		justify-content space-around
+
+
+	&__field-name,
+	&__field-email,
+	&__field-message
+		margin-bottom 25px
+		position relative
+		width 100%
+		padding 5px
+		height 37px
+		background-color #f9f9f9
+		border none 
+		outline none
+		border 2px solid transparent
+		border-radius 1px
+
+
+	&__field-name:valid + .message__placeholder,
+	&__field-email:valid + .message__placeholder
+		transform translateY(-86px)
+		color accent
+
+
+	&__placeholder
+		transform translateY(-50px)
+		padding-left 8px
+		transition all 0.3s
+
+	&__field-name:focus + .message__placeholder,
+	&__field-email:focus + .message__placeholder
+		transform translateY(-86px)
+		color accent
+
+	
+	&__field-name:focus,
+	&__field-email:focus, 
+	&__field-message:focus
+		border 2px solid accent
+	
+	&__field-message
+		min-height 130px
+		overflow hidden
+	
+		&:focus
+			color accent
+
+	&__send
+		width 45px
+		height 30px
+		border-radius 1px
+		border none
+		effect-btn()
+		text-transform none

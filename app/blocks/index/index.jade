@@ -8,6 +8,7 @@ include ../popular-post/popular-post
 include ../follows/follows
 include ../tags/tags
 include ../slider/slider
+include ../message/message
 
 mixin index()
 	+b('main').index
@@ -24,10 +25,14 @@ mixin index()
 				+new(getData('slide-2'))
 				+new(getData('slide-3'))
 				+new(getData('slide-4'))
-		+e.__wrapper-right
+			+row
+				+post(getData('post-three'))
+				+post(getData('post-one'))
+		+e.wrapper-right
 			+about(getData('about-text'))
 			+categories(getData('categories'))
 			+subscribe
 			+popular-post(getData('popular-post'))
 			+follows
 			+tags
+			+message

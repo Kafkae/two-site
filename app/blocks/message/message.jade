@@ -1,3 +1,25 @@
 mixin message()
-	+b.message&attributes(attributes)
-		block
+	+b('aside').message&attributes(attributes)
+		+e('h2').title drop me a message
+		+e('form').form(action="/" method="post")
+			+e('label').form-row
+				+e('input').field-name( required placeholder="" type="text" id='name')
+				+e('div').placeholder Your Name
+			+e('label').form-row
+				+e('input').field-email( required placeholder="" type="text" id='email')
+				+e('div').placeholder Your Email
+			+e('label').form-row
+				+e('textarea').field-message( required placeholder="" id='comment') Your Message
+			+e('button').send Send
+			
+			
+			
+			//- +e.form-row
+			//- 	+e('input').field-name( required placeholder="" type="text" id='name')
+			//- 	+e('span').placeholder Your Name
+			//- +e.form-row
+			//- 	+e('input').field-email( required placeholder="" type="email" id='email')
+			//- 	+e('span').placeholder Your Email
+			//- +e.form-row
+			//- 	+e('textarea').field-message(required placeholder="" id='comment')
+			//- 	+e('span').placeholder Your Message

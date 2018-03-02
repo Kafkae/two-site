@@ -1,5 +1,5 @@
 mixin post(data)
-	+b.post&attributes(attributes)
+	+b('article').post&attributes(attributes)
 		+e.group-info 
 			+e('a').title(href='javascript:void(0)') #{data.title}
 			+e('span').date #{data.date}

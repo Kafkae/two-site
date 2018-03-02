@@ -5,7 +5,7 @@ include ../social-list/social-list
 include ../burger/burger
 
 mixin header()
-	+b('header').header&attributes(attributes)
+	+b('header').header(role='banner')
 		+e.wrapper
 			+e.content
 				+logo

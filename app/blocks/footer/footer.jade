@@ -1,3 +1,16 @@
+include ../logo/logo
+include ../social-author/social-author
+
 mixin footer()
-	+b.footer&attributes(attributes)
-		block
+	+b('footer').footer(role="contentinfo")
+		+e.wrap
+			+e.content
+				+logo
+				+social-author
+				+e.love-sector(role="presentation")
+					+e('p').love-text
+						| Made with  
+					+icon('icon-heart')(width='16' height='16')
+					+e('span').name-des
+						| Imran Khan
+					

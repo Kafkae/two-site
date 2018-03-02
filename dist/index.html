@@ -15,6 +15,379 @@
 		<meta name="theme-color" content="#ffffff">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<style type="text/css">
+			@font-face {
+				font-family: 'Myriad Pro';
+				src: url(../fonts/MyriadPro-Bold.eot);
+				src: url(../fonts/MyriadPro-Bold.eot?#iefix) format('embedded-opentype'), url(../fonts/MyriadPro-Bold.woff) format('woff'), url(../fonts/MyriadPro-Bold.ttf) format('truetype');
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap
+			}
+
+			@font-face {
+				font-family: Raleway;
+				src: url(../fonts/Raleway-Bold.eot);
+				src: url(../fonts/Raleway-Bold.eot?#iefix) format('embedded-opentype'), url(../fonts/Raleway-Bold.woff) format('woff'), url(../fonts/Raleway-Bold.ttf) format('truetype');
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap
+			}
+
+			@font-face {
+				font-family: Raleway;
+				src: url(../fonts/Raleway-Regular.eot);
+				src: url(../fonts/Raleway-Regular.eot?#iefix) format('embedded-opentype'), url(../fonts/Raleway-Regular.woff) format('woff'), url(../fonts/Raleway-Regular.ttf) format('truetype');
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap
+			}
+
+		</style>
+		<style type="text/css">
+			<div class="page"> {
+				font-family: Myriad Pro, sans-serif;
+				color: #333;
+				background-color: #fff;
+				position: relative;
+				height: auto;
+				overflow-x: hidden;
+			}
+
+			.box {
+				font-size: 16px;
+			}
+
+			.header {
+				height: 100vh;
+				background: url("../images/background.png");
+				background-repeat: no-repeat;
+				background-position: center top;
+				background-size: cover;
+			}
+
+			.header__wrapper {
+				background-color: rgba(193, 194, 197, 0.8);
+				width: 100%;
+				height: 84px;
+				display: -ms-flexbox;
+				display: flex;
+			}
+
+			.header__content {
+				width: 1149px;
+				margin: 0 auto;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-align: center;
+				align-items: center;
+			}
+
+			.header__hg-group {
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-preferred-size: 100px;
+				flex-basis: 100px;
+				-ms-flex-positive: 1;
+				flex-grow: 1;
+			}
+
+			@media screen and (max-width: 840px) {
+				.header__hg-group {
+					display: none;
+				}
+			}
+
+			@media screen and (max-width: 840px) {
+				.header .header__hg-group_mobile {
+					display: -ms-flexbox;
+					display: flex;
+					-ms-flex-pack: center;
+					justify-content: center;
+					position: absolute;
+					width: 100%;
+					top: 374px;
+					background-color: rgba(193, 194, 197, 0.8);
+				}
+			}
+
+			.logo {
+				display: -ms-flexbox;
+				display: flex;
+				margin-left: 5px;
+			}
+
+			.logo__image {
+				width: 280px;
+			}
+
+			@media (min-width: 50px) and (max-width: 891px) {
+				.logo__image {
+					width: 225px;
+				}
+			}
+
+			.main-menu {
+				font-size: 1.2em;
+				-ms-flex-positive: 3;
+				flex-grow: 3;
+				margin-left: 35px;
+			}
+
+			.main-menu__default {
+				opacity: 0.3;
+			}
+
+			.main-menu__wrap {
+				display: -ms-flexbox;
+				display: flex;
+			}
+
+			.main-menu__item {
+				padding-top: 13px;
+				padding-bottom: 13px;
+			}
+
+			.main-menu__link {
+				color: #414141;
+				text-decoration: none;
+				padding: 10px;
+				white-space: nowrap;
+				position: relative;
+			}
+
+			.main-menu__link_hover::after {
+				position: absolute;
+				content: '';
+				transition: all 300ms ease-in-out;
+				width: 100%;
+				height: 2px;
+				bottom: 3px;
+				background-color: #333;
+				left: 0;
+				transform: scale(0);
+			}
+
+			.main-menu__link:hover::after {
+				transform: scaleX(0.7);
+			}
+
+			@media screen and (max-width: 840px) {
+				.main-menu {
+					display: none;
+				}
+			}
+
+			@media screen and (max-width: 840px) {
+				.main-menu_mobile {
+					list-style: none;
+					text-decoration: none;
+					font-size: 1.7em;
+					-ms-flex-preferred-size: 500px;
+					flex-basis: 500px;
+					-ms-flex-positive: 3;
+					flex-grow: 3;
+					position: absolute;
+					top: 84px;
+					background-color: rgba(193, 194, 197, 0.8);
+					width: 100%;
+					display: -ms-flexbox;
+					display: flex;
+					margin-left: 0px;
+				}
+				.main-menu_mobile .main-menu__wrap_mobile {
+					display: -ms-flexbox;
+					display: flex;
+					list-style: none;
+					-ms-flex-wrap: nowrap;
+					flex-wrap: nowrap;
+					-ms-flex-direction: column;
+					flex-direction: column;
+					-ms-flex-align: center;
+					align-items: center;
+					width: 100%;
+				}
+				.main-menu_mobile .main-menu__link_mobile {
+					padding-top: 13px;
+					padding-bottom: 13px;
+					margin-bottom: 220px;
+					padding-left: 50px;
+					padding-right: 50px;
+				}
+				.main-menu_mobile .main-menu__item_mobile {
+					margin-bottom: 5px;
+				}
+			}
+
+			.burger {
+				margin-left: auto;
+				cursor: pointer;
+				padding: 20px;
+			}
+
+			.burger__line {
+				position: relative;
+			}
+
+			.burger__line,
+			.burger__line::before,
+			.burger__line::after {
+				display: block;
+				width: 20px;
+				height: 3px;
+				background-color: #212121;
+			}
+
+			.burger__line::before,
+			.burger__line::after {
+				position: absolute;
+				content: '';
+			}
+
+			.burger__line::before {
+				top: -8px;
+			}
+
+			.burger__line::after {
+				top: 8px;
+			}
+
+			.burger__line_active {
+				background-color: transparent;
+				transition-duration: 0.3s;
+			}
+
+			.burger__line_active::before {
+				transform: translateY(8px) rotate(45deg);
+				transition-duration: 0.3s;
+			}
+
+			.burger__line_active::after {
+				transform: translateY(-8px) rotate(-45deg);
+			}
+
+			@media screen and (min-width: 840px) {
+				.burger {
+					display: none;
+				}
+			}
+
+			.search-button {
+				display: -ms-flexbox;
+				display: flex;
+			}
+
+			.search-button__btn-search {
+				background: none;
+				border: none;
+			}
+
+			.search-button__btn-search:hover {
+				transform: rotate(360deg);
+				transition-duration: 0.5s;
+			}
+
+			.search-button__btn-search:active {
+				transform: rotate(-360deg) scale(1.3);
+				transition-duration: 1s;
+			}
+
+			.search-button__search-popup {
+				display: none;
+				position: fixed;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				z-index: 100;
+			}
+
+			.search-button__search-bg {
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+
+			.search-button__search-form {
+				display: block;
+				width: 100%;
+				position: relative;
+				right: -100%;
+				border: none;
+			}
+
+			.search-button__field-form {
+				position: relative;
+				z-index: 100;
+			}
+
+			.search-button__field {
+				margin-top: 84px;
+				outline: none;
+				width: 100%;
+				height: 55px;
+				background-color: #a2a3a7;
+				border: 2px solid #000;
+				outline: none;
+				font-size: 1.5em;
+				text-align: center;
+			}
+
+			.search-button__field:-ms-input-placeholder {
+				font-size: 1em;
+				color: #000;
+			}
+
+			.search-button__field::placeholder {
+				font-size: 1em;
+				color: #000;
+			}
+
+			.social-list {
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-direction: row;
+				flex-direction: row;
+				-ms-flex-align: center;
+				align-items: center;
+			}
+
+			.social-list__item {
+				padding: 10px;
+			}
+
+			.social-list__item:hover {
+				transform: scale(1.5);
+				transition-duration: 0.5s;
+			}
+
+			.social-list__item:active {
+				transform: scale(1.8);
+				transition-duration: 0.3s;
+			}
+
+			.socials {
+				display: none;
+			}
+
+			</div>
+
+		</style>
+		<link rel="preload" href="assets/fonts/MyriadPro-Regular.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="assets/fonts/MyriadPro-Bold.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="assets/fonts/Raleway-Regular.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="assets/fonts/Raleway-Bold.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="assets/fonts/MyriadPro-Regular.ttf" as="font" type="font/ttf" crossorigin>
+		<link rel="preload" href="assets/fonts/MyriadPro-Bold.ttf" as="font" type="font/ttf" crossorigin>
+		<link rel="preload" href="assets/fonts/Raleway-Regular.ttf" as="font" type="font/ttf" crossorigin>
+		<link rel="preload" href="assets/fonts/Raleway-Bold.ttf" as="font" type="font/ttf" crossorigin>
+		<link rel="preload" href="assets/fonts/MyriadPro-Regular.eot" as="font" type="font/eot" crossorigin>
+		<link rel="preload" href="assets/fonts/MyriadPro-Bold.eot" as="font" type="font/eot" crossorigin>
+		<link rel="preload" href="assets/fonts/Raleway-Regular.eot" as="font" type="font/eot" crossorigin>
+		<link rel="preload" href="assets/fonts/Raleway-Bold.eot" as="font" type="font/eot" crossorigin>
 		<link sizes="57x57" href="/apple-touch-icon-57x57.png" rel="apple-touch-icon">
 		<link sizes="114x114" href="/apple-touch-icon-114x114.png" rel="apple-touch-icon">
 		<link sizes="72x72" href="/apple-touch-icon-72x72.png" rel="apple-touch-icon">
@@ -46,9 +419,9 @@
 		<link href="/assets/styles/app.min.css" rel="stylesheet">
 	</head>
 
-	<body class="page">
+	<body class="page page_load-font">
 		<div class="box">
-			<header class="header">
+			<header role="banner" class="header">
 				<div class="header__wrapper">
 					<div class="header__content">
 						<div class="logo">
@@ -59,7 +432,7 @@
 						<div class="burger">
 							<span class="burger__line"></span>
 						</div>
-						<nav class="main-menu">
+						<nav role="navigation" class="main-menu">
 							<ul class="main-menu__wrap">
 								<li class="main-menu__item">
 									<a href="/home" class="main-menu__link main-menu__link_active main-menu__link_hover">Home</a>
@@ -88,7 +461,7 @@
 									<div class="search-button__search-form">
 										<form action="javascript:void(0)" method="get" class="search-button__form">
 											<div class="search-button__form-wrap">
-												<input type="search" id="search" name="s" placeholder="Поиск..." class="search-button__field" />
+												<input type="search" id="search" name="s" role="search" placeholder="Поиск..." class="search-button__field" />
 											</div>
 										</form>
 									</div>
@@ -158,7 +531,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="post">
+						<article class="post">
 							<div class="post__group-info">
 								<a href="javascript:void(0)" class="post__title">travel</a>
 								<span class="post__date">april 19,2017</span>
@@ -171,8 +544,8 @@
 								marvels. Built by Shahjahan. Located in Agra. Six hours from Delhi . Man banalo to Delhi dur nai hai.</p>
 							<a href="javascript:void(0)"
 							 class="post__read-more">read more</a>
-						</div>
-						<div class="post">
+						</article>
+						<article class="post">
 							<div class="post__group-info">
 								<a href="javascript:void(0)" class="post__title">travel</a>
 								<span class="post__date">april 19,2017</span>
@@ -184,10 +557,10 @@
 							<p class="post__description">Amazing Goa. Go oa Gone. Amazing Goa. Go oa Gone. Amazing Goa. Go oa Gone. Amazing Goa. Go oa Gone. Amazing Goa. Go
 								oa Gone.</p>
 							<a href="javascript:void(0)" class="post__read-more">read more</a>
-						</div>
+						</article>
 					</div>
 					<div class="row">
-						<div class="post">
+						<article class="post">
 							<div class="post__group-info">
 								<a href="javascript:void(0)" class="post__title">travel</a>
 								<span class="post__date">april 19,2017</span>
@@ -199,8 +572,8 @@
 							<p class="post__description">Do you find yourself reading stories about adventures in outdoor magazines and websites and feeling down about what
 								you did on your summer vacation?</p>
 							<a href="javascript:void(0)" class="post__read-more">read more</a>
-						</div>
-						<div class="post">
+						</article>
+						<article class="post">
 							<div class="post__group-info">
 								<a href="javascript:void(0)" class="post__title">travel</a>
 								<span class="post__date">april 19,2017</span>
@@ -212,149 +585,178 @@
 							<p class="post__description">Do you find yourself reading stories about adventures in outdoor magazines and websites and feeling down about what
 								you did on your summer vacation?</p>
 							<a href="javascript:void(0)" class="post__read-more">read more</a>
+						</article>
+					</div>
+					<div role="slider" class="slider owl-carousel">
+						<div style="background-image: url(../assets/images/slide2.jpg)" class="new">
+							<a href="javascript:void(0)" class="new__categories">featured</a>
+							<ul class="share">
+								<li class="share__item">
+									<a href="javascript:void(0)" class="share__name-soc">
+										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-facebook"></use></svg>
+									</a>
+								</li>
+								<li class="share__item">
+									<a href="javascript:void(0)" class="share__name-soc">
+										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-twitter"></use></svg>
+									</a>
+								</li>
+								<li class="share__item">
+									<a href="javascript:void(0)" class="share__name-soc">
+										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-dribbble"></use></svg>
+									</a>
+								</li>
+								<li class="share__item">
+									<a href="javascript:void(0)" class="share__name-soc">
+										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-behance"></use></svg>
+									</a>
+								</li>
+							</ul>
+							<div class="new__wrapper">
+								<div class="new__group-info">
+									<a href="javascript:void(0)" class="new__type">travel style /</a>
+									<span class="new__data">april 19,2017</span>
+								</div>
+								<h2 class="new__name">travelling in mumdai: street of mumbai</h2>
+								<p class="new__description">Finally, and most importantly...Happy Travelling. Finally, and most importantly...Happy Travelling!</p>
+								<a href="javascript:void(0)"
+								 class="new__read-more">read more</a>
+							</div>
+						</div>
+						<div style="background-image: url(../assets/images/sliddddddddddddddddddddddddd.jpg)" class="new">
+							<a href="javascript:void(0)" class="new__categories">new</a>
+							<ul class="share">
+								<li class="share__item">
+									<a href="javascript:void(0)" class="share__name-soc">
+										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-facebook"></use></svg>
+									</a>
+								</li>
+								<li class="share__item">
+									<a href="javascript:void(0)" class="share__name-soc">
+										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-twitter"></use></svg>
+									</a>
+								</li>
+								<li class="share__item">
+									<a href="javascript:void(0)" class="share__name-soc">
+										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-dribbble"></use></svg>
+									</a>
+								</li>
+								<li class="share__item">
+									<a href="javascript:void(0)" class="share__name-soc">
+										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-behance"></use></svg>
+									</a>
+								</li>
+							</ul>
+							<div class="new__wrapper">
+								<div class="new__group-info">
+									<a href="javascript:void(0)" class="new__type">travel style /</a>
+									<span class="new__data">april 19,2017</span>
+								</div>
+								<h2 class="new__name">travelling in mumdai: street of mumbai</h2>
+								<p class="new__description">Finally, and most importantly...Happy Travelling. Finally, and most importantly...Happy Travelling!</p>
+								<a href="javascript:void(0)"
+								 class="new__read-more">read more</a>
+							</div>
+						</div>
+						<div style="background-image: url(../assets/images/slide2.jpg)" class="new">
+							<a href="javascript:void(0)" class="new__categories">featured</a>
+							<ul class="share">
+								<li class="share__item">
+									<a href="javascript:void(0)" class="share__name-soc">
+										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-facebook"></use></svg>
+									</a>
+								</li>
+								<li class="share__item">
+									<a href="javascript:void(0)" class="share__name-soc">
+										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-twitter"></use></svg>
+									</a>
+								</li>
+								<li class="share__item">
+									<a href="javascript:void(0)" class="share__name-soc">
+										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-dribbble"></use></svg>
+									</a>
+								</li>
+								<li class="share__item">
+									<a href="javascript:void(0)" class="share__name-soc">
+										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-behance"></use></svg>
+									</a>
+								</li>
+							</ul>
+							<div class="new__wrapper">
+								<div class="new__group-info">
+									<a href="javascript:void(0)" class="new__type">travel style /</a>
+									<span class="new__data">april 19,2017</span>
+								</div>
+								<h2 class="new__name">travelling in mumdai: street of mumbai</h2>
+								<p class="new__description">Finally, and most importantly...Happy Travelling. Finally, and most importantly...Happy Travelling!</p>
+								<a href="javascript:void(0)"
+								 class="new__read-more">read more</a>
+							</div>
+						</div>
+						<div style="background-image: url(../assets/images/sliddddddddddddddddddddddddd.jpg)" class="new">
+							<a href="javascript:void(0)" class="new__categories">new</a>
+							<ul class="share">
+								<li class="share__item">
+									<a href="javascript:void(0)" class="share__name-soc">
+										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-facebook"></use></svg>
+									</a>
+								</li>
+								<li class="share__item">
+									<a href="javascript:void(0)" class="share__name-soc">
+										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-twitter"></use></svg>
+									</a>
+								</li>
+								<li class="share__item">
+									<a href="javascript:void(0)" class="share__name-soc">
+										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-dribbble"></use></svg>
+									</a>
+								</li>
+								<li class="share__item">
+									<a href="javascript:void(0)" class="share__name-soc">
+										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-behance"></use></svg>
+									</a>
+								</li>
+							</ul>
+							<div class="new__wrapper">
+								<div class="new__group-info">
+									<a href="javascript:void(0)" class="new__type">travel style /</a>
+									<span class="new__data">april 19,2017</span>
+								</div>
+								<h2 class="new__name">travelling in mumdai: street of mumbai</h2>
+								<p class="new__description">Finally, and most importantly...Happy Travelling. Finally, and most importantly...Happy Travelling!</p>
+								<a href="javascript:void(0)"
+								 class="new__read-more">read more</a>
+							</div>
 						</div>
 					</div>
-					<div class="slider owl-carousel">
-						<div style="background-image: url(../assets/images/slide2.jpg)" class="new">
-							<a href="javascript:void(0)" class="new__categories">featured</a>
-							<ul class="share">
-								<li class="share__item">
-									<a href="javascript:void(0)" class="share__name-soc">
-										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-facebook"></use></svg>
-									</a>
-								</li>
-								<li class="share__item">
-									<a href="javascript:void(0)" class="share__name-soc">
-										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-twitter"></use></svg>
-									</a>
-								</li>
-								<li class="share__item">
-									<a href="javascript:void(0)" class="share__name-soc">
-										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-dribbble"></use></svg>
-									</a>
-								</li>
-								<li class="share__item">
-									<a href="javascript:void(0)" class="share__name-soc">
-										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-behance"></use></svg>
-									</a>
-								</li>
-							</ul>
-							<div class="new__wrapper">
-								<div class="new__group-info">
-									<a href="javascript:void(0)" class="new__type">travel style /</a>
-									<span class="new__data">april 19,2017</span>
-								</div>
-								<h2 class="new__name">travelling in mumdai: street of mumbai</h2>
-								<p class="new__description">Finally, and most importantly...Happy Travelling. Finally, and most importantly...Happy Travelling!</p>
-								<a href="javascript:void(0)"
-								 class="new__read-more">read more</a>
+					<div class="row">
+						<article class="post">
+							<div class="post__group-info">
+								<a href="javascript:void(0)" class="post__title">travel</a>
+								<span class="post__date">april 19,2017</span>
 							</div>
-						</div>
-						<div style="background-image: url(../assets/images/sliddddddddddddddddddddddddd.jpg)" class="new">
-							<a href="javascript:void(0)" class="new__categories">new</a>
-							<ul class="share">
-								<li class="share__item">
-									<a href="javascript:void(0)" class="share__name-soc">
-										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-facebook"></use></svg>
-									</a>
-								</li>
-								<li class="share__item">
-									<a href="javascript:void(0)" class="share__name-soc">
-										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-twitter"></use></svg>
-									</a>
-								</li>
-								<li class="share__item">
-									<a href="javascript:void(0)" class="share__name-soc">
-										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-dribbble"></use></svg>
-									</a>
-								</li>
-								<li class="share__item">
-									<a href="javascript:void(0)" class="share__name-soc">
-										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-behance"></use></svg>
-									</a>
-								</li>
-							</ul>
-							<div class="new__wrapper">
-								<div class="new__group-info">
-									<a href="javascript:void(0)" class="new__type">travel style /</a>
-									<span class="new__data">april 19,2017</span>
-								</div>
-								<h2 class="new__name">travelling in mumdai: street of mumbai</h2>
-								<p class="new__description">Finally, and most importantly...Happy Travelling. Finally, and most importantly...Happy Travelling!</p>
-								<a href="javascript:void(0)"
-								 class="new__read-more">read more</a>
+							<h3 class="post__name">make your adventure sound really epic</h3>
+							<div class="post__group">
+								<img src="../assets/images/paris.jpg" class="post__image" alt="" role="presentation" />
 							</div>
-						</div>
-						<div style="background-image: url(../assets/images/slide2.jpg)" class="new">
-							<a href="javascript:void(0)" class="new__categories">featured</a>
-							<ul class="share">
-								<li class="share__item">
-									<a href="javascript:void(0)" class="share__name-soc">
-										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-facebook"></use></svg>
-									</a>
-								</li>
-								<li class="share__item">
-									<a href="javascript:void(0)" class="share__name-soc">
-										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-twitter"></use></svg>
-									</a>
-								</li>
-								<li class="share__item">
-									<a href="javascript:void(0)" class="share__name-soc">
-										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-dribbble"></use></svg>
-									</a>
-								</li>
-								<li class="share__item">
-									<a href="javascript:void(0)" class="share__name-soc">
-										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-behance"></use></svg>
-									</a>
-								</li>
-							</ul>
-							<div class="new__wrapper">
-								<div class="new__group-info">
-									<a href="javascript:void(0)" class="new__type">travel style /</a>
-									<span class="new__data">april 19,2017</span>
-								</div>
-								<h2 class="new__name">travelling in mumdai: street of mumbai</h2>
-								<p class="new__description">Finally, and most importantly...Happy Travelling. Finally, and most importantly...Happy Travelling!</p>
-								<a href="javascript:void(0)"
-								 class="new__read-more">read more</a>
+							<p class="post__description">Do you find yourself reading stories about adventures in outdoor magazines and websites and feeling down about what
+								you did on your summer vacation?</p>
+							<a href="javascript:void(0)" class="post__read-more">read more</a>
+						</article>
+						<article class="post">
+							<div class="post__group-info">
+								<a href="javascript:void(0)" class="post__title">travel</a>
+								<span class="post__date">april 19,2017</span>
 							</div>
-						</div>
-						<div style="background-image: url(../assets/images/sliddddddddddddddddddddddddd.jpg)" class="new">
-							<a href="javascript:void(0)" class="new__categories">new</a>
-							<ul class="share">
-								<li class="share__item">
-									<a href="javascript:void(0)" class="share__name-soc">
-										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-facebook"></use></svg>
-									</a>
-								</li>
-								<li class="share__item">
-									<a href="javascript:void(0)" class="share__name-soc">
-										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-twitter"></use></svg>
-									</a>
-								</li>
-								<li class="share__item">
-									<a href="javascript:void(0)" class="share__name-soc">
-										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-dribbble"></use></svg>
-									</a>
-								</li>
-								<li class="share__item">
-									<a href="javascript:void(0)" class="share__name-soc">
-										<svg width="37" height="41"><use xlink:href="/assets/images/icon.svg#icon_share-img-behance"></use></svg>
-									</a>
-								</li>
-							</ul>
-							<div class="new__wrapper">
-								<div class="new__group-info">
-									<a href="javascript:void(0)" class="new__type">travel style /</a>
-									<span class="new__data">april 19,2017</span>
-								</div>
-								<h2 class="new__name">travelling in mumdai: street of mumbai</h2>
-								<p class="new__description">Finally, and most importantly...Happy Travelling. Finally, and most importantly...Happy Travelling!</p>
-								<a href="javascript:void(0)"
-								 class="new__read-more">read more</a>
+							<h3 class="post__name">make your adventure sound really epic</h3>
+							<div class="post__group">
+								<img src="../assets/images/taj.jpg" class="post__image" alt="" role="presentation" />
 							</div>
-						</div>
+							<p class="post__description">Manmade marvels. Built by Shahjahan. Located in Agra. Six hours from Delhi . Man banalo to Delhi dur nai hai.Manmade
+								marvels. Built by Shahjahan. Located in Agra. Six hours from Delhi . Man banalo to Delhi dur nai hai.</p>
+							<a href="javascript:void(0)"
+							 class="post__read-more">read more</a>
+						</article>
 					</div>
 				</div>
 				<div class="index__wrapper-right">
@@ -485,7 +887,7 @@
 						</div>
 					</aside>
 					<aside class="tags">
-						<h2 class="tags__title">tags</h2>
+						<h2 class="tags__title">popular tags</h2>
 						<ul class="tags__items">
 							<li class="tags__item">
 								<a href="javascript:void(0)" alt="video" class="tags__show">video</a>
@@ -510,8 +912,149 @@
 							</li>
 						</ul>
 					</aside>
+					<aside class="message">
+						<h2 class="message__title">drop me a message</h2>
+						<form action="/" method="post" class="message__form">
+							<label class="message__form-row">
+								<input required="required" placeholder="" type="text" id="name" class="message__field-name" />
+								<div class="message__placeholder">Your Name</div>
+							</label>
+							<label class="message__form-row">
+								<input required="required" placeholder="" type="text" id="email" class="message__field-email" />
+								<div class="message__placeholder">Your Email</div>
+							</label>
+							<label class="message__form-row">
+								<textarea required="required" placeholder="" id="comment" class="message__field-message">Your Message</textarea>
+							</label>
+							<button class="message__send">Send</button>
+						</form>
+					</aside>
 				</div>
 			</main>
+			<section class="gallery">
+				<h2 class="gallery__title gallery__title_hidden">gallery</h2>
+				<figure class="gallery__wrap">
+					<a href="assets/images/photo.jpg" data-fancybox="group" class="gallery__link gallery__link_js">
+						<img src="assets/images/photo.jpg" alt="travel" class="gallery__image" title="" />
+					</a>
+				</figure>
+				<figure class="gallery__wrap">
+					<a href="assets/images/ho.jpg" data-fancybox="group" class="gallery__link gallery__link_js">
+						<img src="assets/images/ho.jpg" alt="travel" class="gallery__image" title="" />
+					</a>
+				</figure>
+				<figure class="gallery__wrap">
+					<a href="assets/images/lysh.jpg" data-fancybox="group" class="gallery__link gallery__link_js">
+						<img src="assets/images/lysh.jpg" alt="travel" class="gallery__image" title="" />
+					</a>
+				</figure>
+				<figure class="gallery__wrap">
+					<a href="assets/images/les22.jpg" data-fancybox="group" class="gallery__link gallery__link_js">
+						<img src="assets/images/les22.jpg" alt="travel" class="gallery__image" title="" />
+					</a>
+				</figure>
+				<figure class="gallery__wrap">
+					<a href="assets/images/road.jpg" data-fancybox="group" class="gallery__link gallery__link_js">
+						<img src="assets/images/road.jpg" alt="travel" class="gallery__image" title="" />
+					</a>
+				</figure>
+				<figure class="gallery__wrap">
+					<a href="assets/images/neb.jpg" data-fancybox="group" class="gallery__link gallery__link_js">
+						<img src="assets/images/neb.jpg" alt="travel" class="gallery__image" title="" />
+					</a>
+				</figure>
+				<figure class="gallery__wrap">
+					<a href="assets/images/men.jpg" data-fancybox="group" class="gallery__link gallery__link_js">
+						<img src="assets/images/men.jpg" alt="travel" class="gallery__image" title="" />
+					</a>
+				</figure>
+				<figure class="gallery__wrap">
+					<a href="assets/images/zak2.jpg" data-fancybox="group" class="gallery__link gallery__link_js">
+						<img src="assets/images/zak2.jpg" alt="travel" class="gallery__image" title="" />
+					</a>
+				</figure>
+				<figure class="gallery__wrap">
+					<a href="assets/images/top-taj.jpg" data-fancybox="group" class="gallery__link gallery__link_js">
+						<img src="assets/images/top-taj.jpg" alt="travel" class="gallery__image" title="" />
+					</a>
+				</figure>
+				<figure class="gallery__wrap">
+					<a href="assets/images/air.jpg" data-fancybox="group" class="gallery__link gallery__link_js">
+						<img src="assets/images/air.jpg" alt="travel" class="gallery__image" title="" />
+					</a>
+				</figure>
+				<figure class="gallery__wrap">
+					<a href="assets/images/woter.jpg" data-fancybox="group" class="gallery__link gallery__link_js">
+						<img src="assets/images/woter.jpg" alt="travel" class="gallery__image" title="" />
+					</a>
+				</figure>
+				<figure class="gallery__wrap">
+					<a href="assets/images/airbub.jpg" data-fancybox="group" class="gallery__link gallery__link_js">
+						<img src="assets/images/airbub.jpg" alt="travel" class="gallery__image" title="" />
+					</a>
+				</figure>
+				<figure class="gallery__wrap">
+					<a href="assets/images/post-lod.jpg" data-fancybox="group" class="gallery__link gallery__link_js">
+						<img src="assets/images/post-lod.jpg" alt="travel" class="gallery__image" title="" />
+					</a>
+				</figure>
+				<figure class="gallery__wrap">
+					<a href="assets/images/carr.jpg" data-fancybox="group" class="gallery__link gallery__link_js">
+						<img src="assets/images/carr.jpg" alt="travel" class="gallery__image" title="" />
+					</a>
+				</figure>
+			</section>
+			<footer role="contentinfo" class="footer">
+				<div class="footer__wrap">
+					<div class="footer__content">
+						<div class="logo">
+							<a href="github.com" class="logo__link">
+								<svg class="logo__image"><use xlink:href="/assets/images/icon.svg#icon_logo"></use></svg>
+							</a>
+						</div>
+						<ul class="social-author">
+							<li class="social-author__item">
+								<a href="javascript:void(0);" class="social-author__link">
+									<svg width="16" height="16"><use xlink:href="/assets/images/icon.svg#icon_icon-facebook"></use></svg>
+								</a>
+							</li>
+							<li class="social-author__item">
+								<a href="javascript:void(0);" class="social-author__link">
+									<svg width="16" height="16"><use xlink:href="/assets/images/icon.svg#icon_icon-pinterest"></use></svg>
+								</a>
+							</li>
+							<li class="social-author__item">
+								<a href="javascript:void(0);" class="social-author__link">
+									<svg width="16" height="16"><use xlink:href="/assets/images/icon.svg#icon_icon-twitter"></use></svg>
+								</a>
+							</li>
+							<li class="social-author__item">
+								<a href="javascript:void(0);" class="social-author__link">
+									<svg width="16" height="16"><use xlink:href="/assets/images/icon.svg#icon_icon-google"></use></svg>
+								</a>
+							</li>
+							<li class="social-author__item">
+								<a href="javascript:void(0);" class="social-author__link">
+									<svg width="16" height="16"><use xlink:href="/assets/images/icon.svg#icon_icon-instagram"></use></svg>
+								</a>
+							</li>
+							<li class="social-author__item">
+								<a href="javascript:void(0);" class="social-author__link">
+									<svg width="16" height="16"><use xlink:href="/assets/images/icon.svg#icon_icon-rss"></use></svg>
+								</a>
+							</li>
+						</ul>
+						<div role="presentation" class="footer__love-sector">
+							<p class="footer__love-text">Made with </p>
+							<svg width="16" height="16"><use xlink:href="/assets/images/icon.svg#icon_icon-heart"></use></svg>
+							<span class="footer__name-des">Imran Khan</span>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<div class="arrow-scroll arrow-scroll_hover">
+				<svg width="60" height="60" class="arrow-scroll__arrow"><use xlink:href="/assets/images/icon.svg#icon_up-arrow"></use></svg>
+			</div>
 		</div>
 		<script src="/assets/scripts/app.min.js"></script>
 	</body>

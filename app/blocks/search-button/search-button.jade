@@ -10,4 +10,4 @@ mixin search-button()
             +e.search-form
                 +e('form').form(action="javascript:void(0)" method="get" )
                     +e.form-wrap    
-                        +e('input').field(type="search" id="search" name="s" placeholder="Поиск...")
+                        +e('input').field(type="search" id="search" name="s" role="search" placeholder="Поиск...")

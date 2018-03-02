@@ -1,3 +1,11 @@
-mixin gallery()
-	+b.gallery&attributes(attributes)
-		block
+mixin gallery(data)
+	+b('section').gallery&attributes(attributes)
+		+e('h2').title._hidden gallery
+		each value in data
+			+e('figure').wrap
+				+e('a').link._js( href='#{value.link}' data-fancybox="group")
+					+e('img').image(src='#{value.link}' alt='#{value.description}')
+
+			
+		
+

@@ -1,5 +1,5 @@
 mixin main-menu()
-	+b('nav').main-menu&attributes(attributes)
+	+b('nav').main-menu(role='navigation')
 		+e('ul').wrap
 			+e('li').item
 				+e('a').link_active._hover(href='/home')

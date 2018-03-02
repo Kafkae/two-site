@@ -5,8 +5,10 @@ include ../header/header
 include ../box/box
 include ../header/header
 include ../index/index
+include ../gallery/gallery
+include ../footer/footer
+include ../arrow-scroll/arrow-scroll
 include ../scripts/scripts
-
 
 doctype html
 html(lang='ru')
@@ -15,5 +17,8 @@ html(lang='ru')
 		+box
 			+header
 			+index
+			+gallery(getData('gallery'))
+			+footer
+			+arrow-scroll
 			block content
 		+scripts(['app.min.js'])
