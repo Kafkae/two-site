@@ -1441,9 +1441,7 @@ li.fancybox-thumbs-loading {
     box-shadow: 0 0 15px 3px #fff;
     transform: scaleX(30deg);
 }
-.preload {
-    display: block;
-}
+
 .row {
     -ms-flex-preferred-size: 757px;
     flex-basis: 757px;
