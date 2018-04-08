@@ -1,0 +1,53 @@
+'use strict';
+
+var _svg4everybody = require('svg4everybody');
+
+var _svg4everybody2 = _interopRequireDefault(_svg4everybody);
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _FontFaceObserver = require('FontFaceObserver');
+
+var _FontFaceObserver2 = _interopRequireDefault(_FontFaceObserver);
+
+require('../blocks/main-menu/main-menu.js');
+
+require('../blocks/search-button/search-button.js');
+
+require('../blocks/slider/slider.js');
+
+require('../blocks/message/message.js');
+
+require('../blocks/gallery/gallery.js');
+
+require('../blocks/arrow-scroll/arrow-scroll.js');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _jquery2.default)(function () {
+    (0, _svg4everybody2.default)();
+});
+
+//fix font
+
+// var main = new FontFaceObserver('Myriad Pro');
+// var sub = new FontFaceObserver('Raleway');
+
+// main.load().then(function() {
+//     document.documentElement.className += " fontOneLoad";
+// });
+
+// sub.load().then(function() {
+//     document.documentElement.className += " fontOneLoad";
+// });
+
+
+// var fontOneLoad = new FontFaceObserver('НАЗВАНИЕ_ШРИФТА', {});
+// fontOneLoad
+//   .check()
+//   .then(function () { // событие, когда шрифт загружен
+//      // добавляем класс тегу html 
+//      document.documentElement.className += " fontOneLoad";
+//    });
